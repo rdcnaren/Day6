@@ -1,8 +1,8 @@
 1) Question:-movie task
-Ans:-[FIDDLE LINK]:- {https://jsfiddle.net/vx8y4pqk/}
+Ans:-[FIDDLE LINK]:- https://jsfiddle.net/vx8y4pqk/
 
 2) Write a “person” class to hold all the details.
-Ans:-[FIDDLE LINK]:- {https://jsfiddle.net/g92yLmku/7/}
+Ans:-[FIDDLE LINK]:- https://jsfiddle.net/g92yLmku/7/
 
 3) write a class to calculate the Uber price.
-Ans:-[FIDDLE LINK]:- {https://jsfiddle.net/6bky5cfo/2/}
+Ans:-[FIDDLE LINK]:- https://jsfiddle.net/6bky5cfo/2/
