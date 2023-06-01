@@ -1,8 +1,88 @@
 1) Question:-movie task
-Ans:-[FIDDLE LINK]:- https://jsfiddle.net/vx8y4pqk/
+Ans:- 
+class Movies {
+   constructor(name = '', studio = '', rating = '') {
+      this.name = name;
+      this.studio = studio;
+      this._rating = rating || 'PG';
+   }
+   
+   get rating() {
+       return this._rating;
+   }
+   
+   set rating(value = '') {
+              this._rating = value;
+   }
+   
+   getFilteredMovies(data = [], rating = 'PG') {
+      return data.filter((d) => d.rating === rating);
+   }
+}
+
+
+const PS = new Movies('PS2', 'Lyca', 'PG');
+
+PS.rating = "PG";
+
+console.log(PS)
+
+const movieUtils = new Movies();
+var movieList = [
+    new Movies('PS2', 'Lyca', 'PG'),
+    new Movies('FAST & FURIOUS X', 'American', 'PG'),
+    new Movies('Good night', 'Red giant', 'PG13'),
+    new Movies('Pichaikaran', 'Vijay antony studio', ''),
+    new Movies('Casino Royale', 'EON Productions', 'PG13')
+];
+
+
+console.log(movieUtils.getFilteredMovies(movieList, "PG13")) 
 
 2) Write a “person” class to hold all the details.
-Ans:-[FIDDLE LINK]:- https://jsfiddle.net/g92yLmku/7/
+Ans:-class Person {
+  constructor(firstName, lastName, age, gender) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.gender = gender;
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  getAge() {
+    return this.age;
+  }
+
+  getGender() {
+    return this.gender;
+  }
+}
+const detail = new Person("Narendran", "RDC", 21, "Male");
+console.log(detail.getFullName());  
+console.log(detail.getAge());       
+console.log(detail.getGender());    
 
 3) write a class to calculate the Uber price.
-Ans:-[FIDDLE LINK]:- https://jsfiddle.net/6bky5cfo/2/
+Ans:- class UberPriceCalculator {
+  constructor(baseFare, costPerMile, costPerMinute, surgeMultiplier) {
+    this.baseFare = baseFare;
+    this.costPerMile = costPerMile;
+    this.costPerMinute = costPerMinute;
+    this.surgeMultiplier = surgeMultiplier;
+  }
+
+  calculatePrice(distance, duration, surgeMultiplier = 1) {
+    const priceBeforeSurge = this.baseFare + (distance * this.costPerMile) + (duration * this.costPerMinute);
+    const price = priceBeforeSurge * surgeMultiplier;
+    return price.toFixed(2); 
+  }
+}
+const calculator = new UberPriceCalculator(2.5, 1.25, 0.2, 1.5);
+const distance = 10; 
+const duration = 20; 
+const surgeMultiplier = 2.5;
+const price = calculator.calculatePrice(distance, duration, surgeMultiplier);
+console.log(price); 
